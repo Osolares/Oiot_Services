@@ -6,7 +6,6 @@ volumes:
   vol-emqx-log:
     name: foo-emqx-log
 
-
 services:
 
   node:
