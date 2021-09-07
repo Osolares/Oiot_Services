@@ -2,15 +2,15 @@
 
 
 ## --------------------------------------------------
-## Gabriela Q.  Pablo S. y Benjamín S. - IoTicos.org
+## Osolares - OSD Technologies
 ## ---------------------------------------------------
 
 ## --------------------------------------------------
-## ReymondRojasNúñez - IoTCostaRica -ISCORP2021
-## Creditos: ioticos.org
+##
+##
 ## ---------------------------------------------------
 
-## GRACIAS REYMOND!!!
+##
 
 rand-str()
 {
@@ -29,13 +29,16 @@ rand-str()
 
 clear
 msg="
-  _____     _____ _                   ___   __  
-  \_   \___/__   (_) ___ ___  ___    / _ \ / /  
-   / /\/ _ \ / /\/ |/ __/ _ \/ __|  / /_\// /   
-/\/ /_| (_) / /  | | (_| (_) \__ \ / /_\\/ /___ 
-\____/ \___/\/   |_|\___\___/|___/ \____/\____/ 
 
-                                    ioticoscr                                                
+                        )   (    (                             
+                     ( /(   )\ ) )\ )                          
+                     )\()) (()/((()/(                          
+                    ((_)\   /(_))/(_))                         
+                      ((_) (_)) (_))_                          
+                     / _ \ / __| |   \                         
+                    | (_) |\__ \ | |) |                        
+                     )___/ |___/ |__(/                         
+                                               
 "
 
 
@@ -276,8 +279,8 @@ sudo ./install_docker.sh
 sudo rm install_docker.sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-sudo git clone https://github.com/ioticos/ioticos_god_level_services.git
-sudo mv ioticos_god_level_services services
+sudo git clone https://github.com/Osolares/Oiot_Services.git
+sudo mv Oiot_Services services
 
 
 cd services
@@ -303,8 +306,8 @@ sudo sh -c " echo 'EMQX_DEFAULT_USER_PASSWORD=${EMQX_DEFAULT_USER_PASSWORD}' >> 
 sudo sh -c " echo 'EMQX_DEFAULT_APPLICATION_SECRET=${EMQX_DEFAULT_APPLICATION_SECRET}' >> $filename"
 
 
-sudo git clone https://github.com/ioticos/ioticos_god_level_app.git
-sudo mv ioticos_god_level_app  app
+sudo git clone https://github.com/Osolares/Oiot_App.git
+sudo mv Oiot_App  app
 
 cd app
 
@@ -324,7 +327,7 @@ sudo sh -c "echo 'MONGO_USERNAME=${MONGO_USERNAME}' >> $filename"
 sudo sh -c "echo 'MONGO_PASSWORD=${MONGO_PASSWORD}' >> $filename"
 sudo sh -c "echo 'MONGO_HOST=mongo' >> $filename"
 sudo sh -c "echo 'MONGO_PORT=${MONGO_PORT}' >> $filename"
-sudo sh -c "echo 'MONGO_DATABASE=ioticos_god_level' >> $filename"
+sudo sh -c "echo 'MONGO_DATABASE=Oiot_DB' >> $filename"
 sudo sh -c "echo '' >> $filename"
 
 
