@@ -20,7 +20,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "${MONGO_USERNAME}"
       MONGO_INITDB_ROOT_PASSWORD: "${MONGO_PASSWORD}"
     volumes:
-      - ./mongodata:/data/db
+      - .\/mongodata:/data/db
     ports:
       - ${MONGO_EXT_PORT}:27017
 
@@ -30,10 +30,11 @@ services:
     restart: always
     ports:
       - 18083:18083
-      - 1883:1883
       - 8883:8883
       - 8083:8083
       - 8085:8081
+      - 1883:1883
+
 
     volumes:
       - vol-emqx-data:/opt/emqx/data
@@ -43,7 +44,7 @@ services:
       - mongo
 
     extra_hosts:
-      - "localhost:192.168.0.6"
+      - "localhost:192.168.1.4"
 
     environment:
       EMQX_NAME: Oiot
@@ -71,8 +72,7 @@ services:
       EMQX_AUTH__MONGO__LOGIN: "${MONGO_USERNAME}"
       EMQX_AUTH__MONGO__PASSWORD: "${MONGO_PASSWORD}"
       EMQX_AUTH__MONGO__AUTH_SOURCE: admin
-
-      EMQX_AUTH__MONGO__DATABASE: "Oiot_DB"
+      EMQX_AUTH__MONGO__DATABASE : "${MONGO_DATABASE}"
       EMQX_AUTH__MONGO__AUTH_QUERY__COLLECTION: "emqxauthrules"
 
       EMQX_AUTH__MONGO__SUPER_QUERY__COLLECTION: "emqxauthrules"
