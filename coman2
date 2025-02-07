@@ -1,1 +1,5 @@
 ngrok config add-authtoken 2sgOKiGq81bPRrtEVLcnomIevLW_2i8vWWH8bGSNoL3qes3gX
+wget https://raw.githubusercontent.com/Osolares/Oiot_Services/master/install_oiot.sh
+sudo chmod 777 install_oiot.sh
+chmod +x install_oiot.sh
+./install_oiot.sh
