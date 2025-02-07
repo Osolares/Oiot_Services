@@ -338,7 +338,7 @@ sudo sh -c " echo 'EMQX_NODE_SUPERUSER_USER=${EMQX_NODE_SUPERUSER_USER}' >> $fil
 sudo sh -c " echo 'EMQX_NODE_SUPERUSER_PASSWORD=${EMQX_NODE_SUPERUSER_PASSWORD}' >> $filename"
 sudo sh -c " echo 'EMQX_API_HOST=${IP}' >> $filename"
 sudo sh -c " echo 'EMQX_API_TOKEN=${EMQX_API_TOKEN}' >> $filename"
-sudo sh -c "echo 'EMQX_RESOURCES_DELAY=30000' >> $filename"
+sudo sh -c "echo 'EMQX_RESOURCES_DELAY=90000' >> $filename"
 sudo sh -c "echo '' >> $filename"
 
 # F R O N T
@@ -358,9 +358,9 @@ cd ..
 
 
 
-sudo docker-compose -f docker_node_install.yml up
-sudo docker-compose -f docker_nuxt_build.yml up
-sudo docker-compose -f docker_compose_production.yml up -d
+#sudo docker-compose -f docker_node_install.yml up
+#sudo docker-compose -f docker_nuxt_build.yml up
+#sudo docker-compose -f docker_compose_production.yml up -d
 
 
 
